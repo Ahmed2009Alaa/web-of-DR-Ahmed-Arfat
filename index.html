@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>مكتب الرغد للمحاماة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            background: radial-gradient(circle at center, #000, #000);
+            padding: 20px;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 20px gold, 0 0 40px #ffcc00, 0 0 60px gold;
+            }
+
+            50% {
+                box-shadow: 0 0 30px #ffdf33, 0 0 60px gold, 0 0 90px #ffcc00;
+            }
+        }
+
+        @keyframes textGlow {
+
+            0%,
+            100% {
+                text-shadow: 0 0 5px gold, 0 0 15px #ffcc00;
+            }
+
+            50% {
+                text-shadow: 0 0 20px #ffdf33, 0 0 40px gold;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card {
+            display: flex;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            padding: 25px;
+            max-width: 1100px;
+            margin: auto;
+            gap: 20px;
+            backdrop-filter: blur(20px);
+            animation: fadeInUp 1s ease forwards;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+        }
+
+        .left {
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .title {
+            font-size: clamp(26px, 5vw, 50px);
+            font-weight: 800;
+            background: linear-gradient(90deg, gold, white, gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: textGlow 2s infinite;
+        }
+
+        .subtitle {
+            font-size: clamp(18px, 4vw, 28px);
+            font-weight: 600;
+            color: gold;
+            animation: textGlow 3s infinite;
+        }
+
+        .phone {
+            font-size: clamp(20px, 5vw, 34px);
+            font-weight: bold;
+            color: gold;
+            animation: textGlow 1.5s infinite;
+            margin: 15px 0;
+        }
+
+        .cta,
+        .location-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, gold, #ffcc00);
+            color: #000;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+            transition: transform .3s ease, box-shadow .3s ease;
+        }
+
+        .cta:hover,
+        .location-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.9);
+        }
+
+        .logo {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo img {
+            width: clamp(200px, 40vw, 300px);
+            height: clamp(200px, 40vw, 300px);
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid gold;
+            animation: glow 2s infinite alternate;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        .location {
+            margin-top: 15px;
+        }
+
+        @media (max-width:600px) {
+            .card {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta,
+            .location-btn {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="left">
+            <div class="title">مكتب الرغد للمحاماة</div>
+            <div class="subtitle">⚖️ د. أحمد عرفات - المحامي</div>
+            <div class="phone">📞 +20 103 255 5695</div>
+
+            <a href="tel:+201032555695" class="cta">📞 اتصل الآن</a>
+
+            <div class="location">
+                <a href="https://maps.google.com/?q=27.7302883,30.8368059" target="_blank" class="location-btn">
+                    📍 موقعنا على الخريطة
+                </a>
+            </div>
+
+            <div class="video-container">
+                <iframe
+                    src="https://www.facebook.com/plugins/video.php?href=https://www.facebook.com/reel/599370755261663&show_text=false&width=500"
+                    frameborder="100" allowfullscreen
+                    allow=" autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+            </div>
+        </div>
+
+        <div class="logo">
+            <img src="https://i.postimg.cc/PxCbgJ4g/logo.jpg" alt="شعار مكتب الرغد للمحاماة">
+        </div>
+    </div>
+</body>
+
+</html>
